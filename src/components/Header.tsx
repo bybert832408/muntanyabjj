@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/lib/dictionaries";
 import { locales } from "@/lib/dictionaries";
+import { assetPath } from "@/lib/asset-path";
 
 export default function Header({
   lang,
@@ -19,8 +20,15 @@ export default function Header({
   return (
     <header className="sticky top-0 z-50 bg-blue-kimono text-white">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3">
-        <Link href={`/${lang}`} className="text-lg font-bold tracking-wide">
-          {dict.site.name}
+        <Link href={`/${lang}`} className="shrink-0">
+          {/* eslint-disable-next-line @next/next/no-img-element -- basePath-aware src, no benefit from next/image with images.unoptimized */}
+          <img
+            src={assetPath("/images/logo-64.png")}
+            alt={dict.site.name}
+            width={40}
+            height={40}
+            className="h-10 w-10"
+          />
         </Link>
 
         <nav

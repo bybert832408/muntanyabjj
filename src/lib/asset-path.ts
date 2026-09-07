@@ -1,6 +1,6 @@
-import { basePath } from "../../basepath.mjs";
+import { basePath, siteOrigin } from "../../basepath.mjs";
 
-export { basePath };
+export { basePath, siteOrigin };
 
 export function assetPath(path: string) {
   return `${basePath}${path}`;

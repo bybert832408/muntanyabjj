@@ -9,7 +9,9 @@
     "camps": "Camps",
     "guides": "Guies",
     "shop": "Botiga",
-    "cta": "Apunta't"
+    "cta": "Apunta't",
+    "openMenu": "Obrir menú",
+    "closeMenu": "Tancar menú"
   },
   "trialBadge": "Primera classe de prova gratuïta",
   "home": {

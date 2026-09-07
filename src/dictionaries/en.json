@@ -9,7 +9,9 @@
     "camps": "Camps",
     "guides": "Guides",
     "shop": "Shop",
-    "cta": "Join"
+    "cta": "Join",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "trialBadge": "First trial class free",
   "home": {

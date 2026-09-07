@@ -1,5 +1,4 @@
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-const repoName = "muntanyabjj";
+import { basePath, isGithubActions } from "./basepath.mjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,8 +8,8 @@ const nextConfig = {
     unoptimized: true,
   },
   ...(isGithubActions && {
-    basePath: `/${repoName}`,
-    assetPrefix: `/${repoName}/`,
+    basePath,
+    assetPrefix: `${basePath}/`,
   }),
 };
 

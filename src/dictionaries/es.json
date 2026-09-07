@@ -11,13 +11,125 @@
     "shop": "Tienda",
     "cta": "Apúntate"
   },
+  "trialBadge": "Primera clase de prueba gratuita",
   "home": {
-    "heading": "Bienvenido a Muntanya Jiu-Jitsu",
-    "subheading": "Estamos preparando la web. Muy pronto encontrarás aquí toda la información de la escuela."
+    "hero": {
+      "heading": "Muntanya Jiu-Jitsu",
+      "subheading": "Brazilian Jiu-Jitsu de pueblo, en el Pallars Sobirà. Entrena respeto, esfuerzo y comunidad sobre el tatami de Sort.",
+      "ctaJoin": "Apúntate",
+      "ctaWhatsapp": "Escríbenos por WhatsApp"
+    },
+    "escola": {
+      "heading": "La escuela",
+      "intro": "Muntanya Jiu-Jitsu es la escuela de BJJ de Sort, abierta a adultos y niños. Entrenamos a ritmo de pueblo: cercano, exigente cuando toca y sin prisas.",
+      "values": [
+        {
+          "title": "Respeto",
+          "desc": "En el tatami todos somos iguales, del cinturón blanco al negro."
+        },
+        {
+          "title": "Esfuerzo",
+          "desc": "Se progresa a base de constancia, no de talento innato."
+        },
+        {
+          "title": "Comunidad",
+          "desc": "Una familia de entrenamiento, dentro y fuera del tatami."
+        }
+      ],
+      "affiliation": "Escuela afiliada a Team Ganbaru"
+    },
+    "instructor": {
+      "heading": "El instructor",
+      "name": "Pablo",
+      "role": "Instructor",
+      "bio": "Pablo dirige Muntanya Jiu-Jitsu con el objetivo de llevar el Brazilian Jiu-Jitsu de nivel al Pallars, para adultos y niños.",
+      "lineageHeading": "Linaje",
+      "lineageText": "Pablo se formó en Ases Jiu-Jitsu (València) bajo Ezekiel Zayas, cinturón negro desde 2010, fundador de Ases Jiu-Jitsu y director técnico de Team Ganbaru. Zayas es multicampeón europeo IBJJF en cinturón negro y árbitro internacional."
+    },
+    "horaris": {
+      "heading": "Horarios",
+      "note": "Todas las clases se hacen en el Poliesportiu Municipal de Sort.",
+      "days": {
+        "mon": "Lunes",
+        "wed": "Miércoles",
+        "fri": "Viernes"
+      },
+      "sessionTypes": {
+        "bjj": "BJJ",
+        "bjjKids": "BJJ infantil"
+      }
+    },
+    "galeria": {
+      "heading": "Galería",
+      "placeholder": "Fotos próximamente",
+      "instagramNote": "Más fotos y vídeos en Instagram"
+    },
+    "ubicacio": {
+      "heading": "Ubicación y contacto",
+      "addressLabel": "Dónde estamos",
+      "phoneLabel": "Teléfono / WhatsApp",
+      "instagramLabel": "Instagram",
+      "mapLinkLabel": "Abrir en el mapa"
+    }
+  },
+  "tarifes": {
+    "heading": "Tarifas",
+    "intro": "Precios claros, sin letra pequeña.",
+    "monthly": {
+      "label": "Mensualidad",
+      "period": "/mes"
+    },
+    "dropIn": {
+      "label": "Sesión suelta",
+      "period": "/clase"
+    },
+    "private": {
+      "label": "Clases particulares",
+      "period": "/hora"
+    },
+    "trial": "Primera clase de prueba gratuita",
+    "ctaHeading": "¿Tienes dudas sobre las tarifas?",
+    "ctaButton": "Contáctanos"
+  },
+  "camps": {
+    "heading": "Camps",
+    "intro": "Estamos preparando los primeros camps e intensivos de Muntanya Jiu-Jitsu.",
+    "comingSoon": "Próximamente"
+  },
+  "guies": {
+    "heading": "Guías",
+    "intro": "Pronto encontrarás aquí contenido para entender mejor el BJJ: qué es, glosario básico y una guía para familias.",
+    "comingSoon": "Próximamente"
+  },
+  "botiga": {
+    "heading": "Tienda",
+    "intro": "La tienda de Muntanya Jiu-Jitsu todavía no está abierta.",
+    "comingSoon": "Próximamente"
+  },
+  "apuntat": {
+    "heading": "Apúntate",
+    "intro": "Prueba tu primera clase de BJJ gratis. Rellena el formulario o escríbenos directamente por WhatsApp.",
+    "form": {
+      "name": "Nombre",
+      "studentAge": "Edad del alumno/a",
+      "typeLabel": "Tipo de clase",
+      "typeAdult": "Adultos",
+      "typeKids": "Infantil",
+      "phone": "Teléfono",
+      "message": "Mensaje",
+      "submit": "Enviar",
+      "underConstruction": "El formulario todavía está en construcción. De momento, escríbenos por WhatsApp y te respondemos enseguida."
+    },
+    "whatsapp": {
+      "heading": "O más rápido, por WhatsApp",
+      "button": "Abrir WhatsApp",
+      "message": "¡Hola! Me gustaría probar la clase de prueba gratuita de BJJ en Muntanya Jiu-Jitsu."
+    }
   },
   "footer": {
     "affiliation": "Escuela afiliada a Team Ganbaru",
-    "contact": "Contacto",
+    "contactHeading": "Contacto",
+    "instagram": "Instagram",
     "rights": "Todos los derechos reservados."
   }
 }

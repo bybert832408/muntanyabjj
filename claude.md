@@ -65,8 +65,10 @@ Ya existe. **No inventar identidad nueva.**
 2. **L'escola:** qué es Muntanya Jiu-Jitsu, valores (respeto, esfuerzo, comunidad), afiliación Team Ganbaru.
 3. **L'instructor:** Pablo. Foto de las medallas (Valencia Cup BJJ 2026, plata y bronce, SpainBJJ Tour / FIJJD).
    - Presentarlo como **"Instructor"**, NUNCA como "Mestre" (es cinturón azul; en BJJ ese título no corresponde y restaría credibilidad).
-   - Linaje: formado con ~~Ecequiel~~ **[PENDIENTE: verificar nombre exacto y graduación]** de la escuela **ASES (València)**, dentro de **Team Ganbaru**.
-   - **No publicar la sección de linaje hasta verificar el dato con Pablo.** Dejarla maquetada con placeholder.
+   - **Linaje (VERIFICADO, publicable):** Pablo se formó en **Ases Jiu-Jitsu (València)** bajo **Ezekiel Zayas**, cinturón negro desde 2010, fundador de Ases Jiu-Jitsu y director técnico de **Team Ganbaru** (con filiales en España, Alemania e Italia).
+     - Presentar como línea de linaje elegante y breve (2-3 frases máx.): Pablo → Ases Jiu-Jitsu / Ezekiel Zayas → Team Ganbaru. El protagonista de la sección es Pablo, no Zayas.
+     - Palmarés de Zayas: mencionar en genérico y verdadero ("multicampeón europeo IBJJF en cinturón negro, árbitro internacional"), sin cifras exactas de títulos (no verificadas una a una en registros IBJJF).
+     - Grafías correctas: **Ezekiel Zayas** y **Ases Jiu-Jitsu**.
 4. **Horaris:**
    - Dilluns 10:30 — BJJ · 20:00 — BJJ infantil
    - Dimecres 10:30 — BJJ
@@ -83,7 +85,7 @@ Ya existe. **No inventar identidad nueva.**
 | Clases particulares | 25,00 €/h |
 
 - Presentar en tarjetas, con la mensualidad como opción destacada.
-- Añadir nota "Primera classe de prova gratuïta? **[PENDIENTE: confirmar con Pablo si ofrece clase de prueba]**" — no publicar sin confirmar.
+- **Clase de prueba (CONFIRMADA):** destacar "Primera classe de prova gratuïta" / "Primera clase de prueba gratuita" / "First trial class free". Es el gancho principal de captación: debe aparecer también en el hero de la Home y en el CTA "Apunta't".
 - CTA de contacto al pie de la tabla.
 
 ### Camps
@@ -96,7 +98,7 @@ Ya existe. **No inventar identidad nueva.**
 **[PENDIENTE: definir contenido con el usuario.]** En v1: página "properament". Sin pasarela de pago en ninguna fase próxima; si algún día hay productos, se empezará con pedido por WhatsApp.
 
 ### CTA "Apunta't" (formulario)
-- **Fase 1:** el botón lleva a una página/sección con dos vías: (a) formulario visual (nombre, edad del alumno, adulto/infantil, teléfono, mensaje) y (b) botón directo de WhatsApp con mensaje precargado: "Hola! M'agradaria provar una classe de BJJ a Muntanya Jiu-Jitsu."
+- **Fase 1:** el botón lleva a una página/sección con dos vías: (a) formulario visual (nombre, edad del alumno, adulto/infantil, teléfono, mensaje) y (b) botón directo de WhatsApp con mensaje precargado (traducido según idioma activo): ca "Hola! M'agradaria provar la classe de prova gratuïta de BJJ a Muntanya Jiu-Jitsu.", es "¡Hola! Me gustaría probar la clase de prueba gratuita de BJJ en Muntanya Jiu-Jitsu.", en "Hi! I'd like to try the free trial BJJ class at Muntanya Jiu-Jitsu."
 - El envío del formulario en fase 1 se hace vía **Formspree** (plan gratuito, compatible con export estático) — **[PENDIENTE: el usuario creará la cuenta y pasará el endpoint; hasta entonces, el submit muestra aviso "en construcció" o se deshabilita]**.
 - Fase 2 (más adelante, no implementar aún): valorar backend propio o integración con el ecosistema After School/BySelf.
 

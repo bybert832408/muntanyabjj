@@ -3,20 +3,20 @@ import { schedule } from "@/lib/site-config";
 
 export default function Horaris({ dict }: { dict: Dictionary }) {
   return (
-    <section className="border-b border-white/10">
+    <section className="border-b border-black/5 bg-offwhite">
       <div className="mx-auto max-w-5xl px-4 py-16">
-        <h2 className="text-2xl font-bold sm:text-3xl">
+        <h2 className="text-2xl font-bold text-ink sm:text-3xl">
           {dict.home.horaris.heading}
         </h2>
-        <p className="mt-2 text-sm text-white/60">{dict.home.horaris.note}</p>
+        <p className="mt-2 text-sm text-ink/60">{dict.home.horaris.note}</p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {schedule.map((day) => (
             <div
               key={day.day}
-              className="rounded-2xl border border-white/10 p-6"
+              className="rounded-2xl border border-black/10 bg-white p-6"
             >
-              <h3 className="font-semibold text-white">
+              <h3 className="font-semibold text-ink">
                 {dict.home.horaris.days[day.day]}
               </h3>
               <ul className="mt-3 space-y-2 text-sm">
@@ -25,8 +25,8 @@ export default function Horaris({ dict }: { dict: Dictionary }) {
                     key={session.time}
                     className={
                       session.type === "bjjKids"
-                        ? "rounded-lg bg-mbjj-blue/15 px-3 py-2 font-semibold text-mbjj-blue"
-                        : "text-white/70"
+                        ? "rounded-lg bg-yellow-kids px-3 py-2 font-semibold text-ink"
+                        : "rounded-lg bg-blue-logo/10 px-3 py-2 text-ink/80"
                     }
                   >
                     {session.time} — {dict.home.horaris.sessionTypes[session.type]}

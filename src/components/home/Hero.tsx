@@ -10,9 +10,10 @@ export default function Hero({
   dict: Dictionary;
 }) {
   return (
-    <section className="border-b border-white/10 bg-mbjj-black">
+    <section className="bg-gradient-to-b from-blue-kimono to-ink text-white">
       <div className="mx-auto max-w-5xl px-4 py-20 text-center sm:py-28">
-        <span className="inline-block rounded-full bg-mbjj-blue/15 px-4 py-1 text-sm font-semibold text-mbjj-blue">
+        <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 text-sm font-semibold text-ink">
+          <span className="h-2 w-2 rounded-full bg-blue-logo" aria-hidden />
           {dict.trialBadge}
         </span>
 
@@ -26,7 +27,7 @@ export default function Hero({
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Link
             href={`/${lang}/apuntat`}
-            className="rounded-full bg-mbjj-blue px-6 py-3 font-semibold text-mbjj-black transition hover:brightness-110"
+            className="rounded-full bg-blue-logo px-6 py-3 font-semibold text-ink transition hover:brightness-110"
           >
             {dict.home.hero.ctaJoin}
           </Link>

@@ -5,7 +5,7 @@ export default function Footer({ dict }: { dict: Dictionary }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-mbjj-black text-white/80">
+    <footer className="bg-blue-kimono text-white/80">
       <div className="mx-auto max-w-5xl px-4 py-8 text-sm">
         <p className="font-semibold text-white">{dict.site.name}</p>
         <p className="mt-1">{dict.footer.affiliation}</p>

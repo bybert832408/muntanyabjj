@@ -5,8 +5,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "mbjj-blue": "#29ABE2",
-        "mbjj-black": "#0A0A0A",
+        "blue-logo": "#00AEF0",
+        "blue-kimono": "#1E3A8A",
+        ink: "#0A0A0A",
+        offwhite: "#F7F9FB",
+        "yellow-kids": "#FACC15",
       },
     },
   },

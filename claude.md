@@ -40,10 +40,12 @@ Trilingüe: **catalán (defecto), castellano e inglés.**
 Ya existe. **No inventar identidad nueva.**
 
 - Logo: círculo negro con montaña blanca sobre semicírculo azul, texto "MUNTANYA JIU-JITSU / SORT". Fichero proporcionado por el usuario.
-- Paleta derivada del logo:
-  - Azul principal: ~`#29ABE2` (verificar con cuentagotas sobre el logo real)
-  - Negro `#0A0A0A` / blanco `#FFFFFF`
-  - Acento secundario: usar el azul sobre fondos oscuros; evitar más colores.
+- Paleta (5 tokens Tailwind, verificados con cuentagotas sobre el logo real — no añadir más colores):
+  - `blue-logo` `#00AEF0` — cian del logo. Uso: fondos de elementos rellenos (botones, chips, iconos) combinados con texto `ink`. **Nunca como texto suelto ni borde fino sobre fondo claro** (falla contraste AA, 2.4-2.5:1); sobre `blue-kimono` sirve para texto/acentos grandes (≥3:1 AA-large).
+  - `blue-kimono` `#1E3A8A` — azul royal profundo (kimono de competición). Fondos de secciones oscuras (hero, header, footer, franja de contacto), en sustitución del negro casi total.
+  - `ink` `#0A0A0A` — texto sobre fondo claro y detalles. Ya no es el color de fondo dominante del sitio.
+  - `offwhite` `#F7F9FB` — fondo base de la mayoría de secciones (claro).
+  - `yellow-kids` `#FACC15` — uso EXCLUSIVO para lo infantil (badge "BJJ infantil" en horaris). No usar en ningún otro contexto.
 - Tipografía: sans geométrica bold para títulos (estilo del logo), sans legible para cuerpo.
 - Estética: sobria, deportiva, de montaña. Fondos oscuros funcionan bien con las fotos de tatami.
 - Incluir siempre el sello de Team Ganbaru en el footer y en la sección de la escuela (afiliación real).

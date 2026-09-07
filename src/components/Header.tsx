@@ -17,7 +17,7 @@ export default function Header({
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-mbjj-black text-white">
+    <header className="sticky top-0 z-50 bg-blue-kimono text-white">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3">
         <Link href={`/${lang}`} className="text-lg font-bold tracking-wide">
           {dict.site.name}
@@ -34,16 +34,16 @@ export default function Header({
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <nav aria-label="Selector d'idioma" className="flex gap-2 text-sm">
+        <div className="flex items-center gap-3">
+          <nav aria-label="Selector d'idioma" className="flex gap-1 text-sm">
             {locales.map((locale) => (
               <Link
                 key={locale}
                 href={`/${locale}`}
                 className={
                   locale === lang
-                    ? "font-semibold text-mbjj-blue"
-                    : "text-white/70 hover:text-white"
+                    ? "rounded-full bg-blue-logo px-2 py-0.5 font-semibold text-ink"
+                    : "px-2 py-0.5 text-white/70 hover:text-white"
                 }
               >
                 {locale.toUpperCase()}
@@ -53,7 +53,7 @@ export default function Header({
 
           <Link
             href={`/${lang}/apuntat`}
-            className="rounded-full bg-mbjj-blue px-4 py-2 text-sm font-semibold text-mbjj-black transition hover:brightness-110"
+            className="rounded-full bg-blue-logo px-4 py-2 text-sm font-semibold text-ink transition hover:brightness-110"
           >
             {dict.nav.cta}
           </Link>

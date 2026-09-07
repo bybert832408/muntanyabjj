@@ -43,10 +43,12 @@ export default async function TarifesPage({
 
   return (
     <section className="mx-auto max-w-5xl px-4 py-16">
-      <h1 className="text-3xl font-extrabold sm:text-4xl">{tarifes.heading}</h1>
-      <p className="mt-3 text-white/70">{tarifes.intro}</p>
+      <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">
+        {tarifes.heading}
+      </h1>
+      <p className="mt-3 text-ink/70">{tarifes.intro}</p>
 
-      <span className="mt-6 inline-block rounded-full bg-mbjj-blue/15 px-4 py-1 text-sm font-semibold text-mbjj-blue">
+      <span className="mt-6 inline-block rounded-full bg-blue-logo px-4 py-1 text-sm font-semibold text-ink">
         {tarifes.trial}
       </span>
 
@@ -56,25 +58,28 @@ export default async function TarifesPage({
             key={card.label}
             className={
               card.highlight
-                ? "rounded-2xl border-2 border-mbjj-blue bg-mbjj-blue/10 p-8 text-center"
-                : "rounded-2xl border border-white/10 p-8 text-center"
+                ? "overflow-hidden rounded-2xl border border-black/10 bg-white text-center shadow-sm"
+                : "rounded-2xl border border-black/10 bg-white p-8 text-center"
             }
           >
-            <p className="font-semibold text-white">{card.label}</p>
-            <p className="mt-4 text-4xl font-extrabold text-mbjj-blue">
-              {card.price}
-              {pricing.currency}
-            </p>
-            <p className="mt-1 text-sm text-white/60">{card.period}</p>
+            {card.highlight && <div className="h-1.5 bg-blue-logo" />}
+            <div className={card.highlight ? "p-8 pt-6" : ""}>
+              <p className="font-semibold text-ink">{card.label}</p>
+              <p className="mt-4 text-4xl font-extrabold text-ink">
+                {card.price}
+                {pricing.currency}
+              </p>
+              <p className="mt-1 text-sm text-ink/60">{card.period}</p>
+            </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-12 rounded-2xl border border-white/10 p-8 text-center">
-        <h2 className="text-xl font-bold">{tarifes.ctaHeading}</h2>
+      <div className="mt-12 rounded-2xl border border-black/10 bg-white p-8 text-center">
+        <h2 className="text-xl font-bold text-ink">{tarifes.ctaHeading}</h2>
         <Link
           href={`/${params.lang}/apuntat`}
-          className="mt-4 inline-block rounded-full bg-mbjj-blue px-6 py-3 font-semibold text-mbjj-black transition hover:brightness-110"
+          className="mt-4 inline-block rounded-full bg-blue-logo px-6 py-3 font-semibold text-ink transition hover:brightness-110"
         >
           {tarifes.ctaButton}
         </Link>

@@ -1,0 +1,23 @@
+{
+  "site": {
+    "name": "Muntanya Jiu-Jitsu",
+    "tagline": "Brazilian Jiu-Jitsu in the Pallars Sobirà"
+  },
+  "nav": {
+    "home": "Home",
+    "prices": "Prices",
+    "camps": "Camps",
+    "guides": "Guides",
+    "shop": "Shop",
+    "cta": "Join"
+  },
+  "home": {
+    "heading": "Welcome to Muntanya Jiu-Jitsu",
+    "subheading": "We're building the website. Soon you'll find all the school's info here."
+  },
+  "footer": {
+    "affiliation": "School affiliated with Team Ganbaru",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}

@@ -39,9 +39,9 @@ export default function Header({
           <img
             src={assetPath("/images/logo-64.png")}
             alt={dict.site.name}
-            width={40}
-            height={40}
-            className="h-10 w-10"
+            width={48}
+            height={48}
+            className="h-10 w-10 md:h-12 md:w-12"
           />
         </Link>
 

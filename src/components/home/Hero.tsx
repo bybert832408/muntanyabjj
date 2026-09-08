@@ -61,7 +61,7 @@ export default function Hero({
         aria-hidden="true"
         width={380}
         height={380}
-        className="pointer-events-none absolute bottom-0 right-8 hidden h-[clamp(160px,26vw,380px)] w-[clamp(160px,26vw,380px)] translate-y-[30%] rotate-[15deg] drop-shadow-xl sm:block"
+        className="pointer-events-none absolute bottom-0 right-8 hidden h-[clamp(160px,26vw,380px)] w-[clamp(160px,26vw,380px)] translate-y-[30%] rotate-[15deg] drop-shadow-xl sm:block lg:right-20 lg:h-[clamp(220px,34vw,480px)] lg:w-[clamp(220px,34vw,480px)] lg:translate-y-[12%]"
       />
     </section>
   );

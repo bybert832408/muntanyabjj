@@ -4,26 +4,7 @@ import { assetPath } from "@/lib/asset-path";
 export default function Instructor({ dict }: { dict: Dictionary }) {
   return (
     <section className="border-b border-black/5 bg-white">
-      <div className="mx-auto grid max-w-5xl gap-10 px-4 py-16 sm:grid-cols-[minmax(0,260px)_1fr] sm:items-start">
-        <picture>
-          <source
-            type="image/webp"
-            srcSet={[
-              `${assetPath("/images/pablo-medalles-480.webp")} 480w`,
-              `${assetPath("/images/pablo-medalles-800.webp")} 800w`,
-            ].join(", ")}
-            sizes="(min-width: 640px) 260px, 60vw"
-          />
-          <img
-            src={assetPath("/images/pablo-medalles-800.jpg")}
-            alt={dict.home.instructor.name}
-            width={800}
-            height={1050}
-            loading="lazy"
-            className="mx-auto w-full max-w-[260px] rounded-2xl border border-black/10 object-cover"
-          />
-        </picture>
-
+      <div className="mx-auto grid max-w-5xl gap-10 px-4 py-16 sm:grid-cols-[1.2fr_1fr] sm:items-center">
         <div>
           <h2 className="text-2xl font-bold text-ink sm:text-3xl">
             {dict.home.instructor.heading}
@@ -41,6 +22,25 @@ export default function Instructor({ dict }: { dict: Dictionary }) {
               {dict.home.instructor.lineageText}
             </p>
           </div>
+        </div>
+
+        <div className="relative flex h-64 items-end justify-center sm:h-[420px] lg:h-[480px]">
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 90% 85% at 62% 38%, #1E3A8A 0%, #1E3A8A 32%, rgba(30,58,138,0.55) 55%, rgba(30,58,138,0) 85%)",
+            }}
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element -- basePath-aware src, transparent cutout meant to sit directly on the gradient, no card framing */}
+          <img
+            src={assetPath("/images/pablo-instructor.png")}
+            alt={dict.home.instructor.name}
+            width={577}
+            height={1000}
+            className="relative h-full w-auto object-contain object-bottom"
+          />
         </div>
       </div>
     </section>

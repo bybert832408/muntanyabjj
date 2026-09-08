@@ -24,24 +24,24 @@ export default function Instructor({ dict }: { dict: Dictionary }) {
           </div>
         </div>
 
-        <div className="relative flex h-64 items-end justify-center sm:h-[420px] lg:h-[480px]">
-          <div
-            aria-hidden
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 90% 85% at 62% 38%, #1E3A8A 0%, #1E3A8A 32%, rgba(30,58,138,0.55) 55%, rgba(30,58,138,0) 85%)",
-            }}
+        <picture>
+          <source
+            type="image/webp"
+            srcSet={[
+              `${assetPath("/images/pablo-medalles-480.webp")} 480w`,
+              `${assetPath("/images/pablo-medalles-800.webp")} 800w`,
+            ].join(", ")}
+            sizes="(min-width: 640px) 40vw, 80vw"
           />
-          {/* eslint-disable-next-line @next/next/no-img-element -- basePath-aware src, transparent cutout meant to sit directly on the gradient, no card framing */}
           <img
-            src={assetPath("/images/pablo-instructor.png")}
+            src={assetPath("/images/pablo-medalles-800.jpg")}
             alt={dict.home.instructor.name}
-            width={577}
-            height={1000}
-            className="relative h-full w-auto object-contain object-bottom"
+            width={800}
+            height={1050}
+            loading="lazy"
+            className="mx-auto w-full max-w-sm rounded-lg border border-black/10 object-cover sm:max-w-none"
           />
-        </div>
+        </picture>
       </div>
     </section>
   );

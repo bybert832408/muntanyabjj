@@ -95,8 +95,18 @@
   },
   "camps": {
     "heading": "Camps",
-    "intro": "Estem preparant els primers camps i intensius de Muntanya Jiu-Jitsu.",
-    "comingSoon": "Properament"
+    "intro": "Cada estiu organitzem el Ganbaru Camp a Sort, un cap de setmana d'immersió en el Brazilian Jiu-Jitsu combinat amb activitats de muntanya al Pallars. Entrenaments dirigits, bon ambient d'equip i les activitats que fan únic el nostre entorn, com el ràfting pel Noguera Pallaresa. Obert a practicants de tots els nivells.",
+    "camp2026": {
+      "title": "Ganbaru Camp 2026",
+      "badge": "Finalitzat",
+      "body": "5, 6 i 7 de juny · Sort (Pirineu català). Brazilian Jiu-Jitsu i ràfting."
+    },
+    "camp2027": {
+      "title": "Ganbaru Camp 2027",
+      "badge": "Properament",
+      "body": "Estem preparant la propera edició. Deixa'ns les teves dades i t'avisem quan obrim inscripcions.",
+      "cta": "Apunta't"
+    }
   },
   "guies": {
     "heading": "Guies",

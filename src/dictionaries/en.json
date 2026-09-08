@@ -95,8 +95,18 @@
   },
   "camps": {
     "heading": "Camps",
-    "intro": "We're preparing the first Muntanya Jiu-Jitsu camps and intensives.",
-    "comingSoon": "Coming soon"
+    "intro": "Every summer we run the Ganbaru Camp in Sort — a weekend of Brazilian Jiu-Jitsu immersion combined with mountain activities in the Pallars. Coached training sessions, a great team atmosphere and the activities that make our setting special, like rafting on the Noguera Pallaresa river. Open to practitioners of all levels.",
+    "camp2026": {
+      "title": "Ganbaru Camp 2026",
+      "badge": "Finished",
+      "body": "5, 6 & 7 June · Sort (Catalan Pyrenees). Brazilian Jiu-Jitsu and rafting."
+    },
+    "camp2027": {
+      "title": "Ganbaru Camp 2027",
+      "badge": "Coming soon",
+      "body": "We're planning the next edition. Leave us your details and we'll let you know when registration opens.",
+      "cta": "Join"
+    }
   },
   "guies": {
     "heading": "Guides",

@@ -100,8 +100,20 @@
   },
   "guies": {
     "heading": "Guides",
-    "intro": "Soon you'll find content here to better understand BJJ: what it is, a basic glossary and a guide for families.",
-    "comingSoon": "Coming soon"
+    "intro": "Here you'll find the school's reference material, for students and families. It's a complement to in-person classes, not a substitute: the best way to learn BJJ is always on the mats.",
+    "downloadLabel": "Download",
+    "manual": {
+      "title": "Manual técnico de BJJ",
+      "description": "Submission mechanics, escapes, takedowns and positions, with illustrations and belt-level legality notes.",
+      "meta": "PDF · Spanish · 16 pages · 1.3 MB"
+    },
+    "competition": {
+      "title": "Guía de competición BJJ",
+      "description": "IBJJF scoring, penalties, techniques allowed per belt, and a basic competition glossary.",
+      "meta": "PDF · Spanish · 5 pages · 110 KB"
+    },
+    "moreHeading": "More guides coming soon",
+    "moreText": "For example, a guide for families: what a kid needs to get started, what a gi is, and how the kids' belt system works."
   },
   "botiga": {
     "heading": "Shop",

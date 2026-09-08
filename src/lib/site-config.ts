@@ -11,6 +11,11 @@ export const location = {
   lon: 1.1298362,
 };
 
+export const docs = {
+  manual: "/docs/manual-tecnico-bjj.pdf",
+  competition: "/docs/guia-competicion-bjj.pdf",
+};
+
 export const pricing = {
   monthly: 50,
   dropIn: 8,

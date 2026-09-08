@@ -101,16 +101,15 @@
   "guies": {
     "heading": "Guías",
     "intro": "Aquí encontrarás material de referencia de la escuela, pensado para alumnos y familias. Son un complemento a las clases presenciales, no un sustituto: la mejor manera de aprender BJJ siempre es sobre el tatami.",
-    "downloadLabel": "Descargar",
     "manual": {
       "title": "Manual técnico de BJJ",
       "description": "Mecánica de las sumisiones, escapes, derribos y posiciones, con ilustraciones y avisos de legalidad por cinturón.",
-      "meta": "PDF · Castellano · 16 pág. · 1,3 MB"
+      "meta": "PDF · 16 pág. · 0,7 MB"
     },
     "competition": {
-      "title": "Guía de competición BJJ",
+      "title": "Guía de competición",
       "description": "Puntuación IBJJF, faltas, técnicas permitidas por cinturón y un glosario básico de competición.",
-      "meta": "PDF · Castellano · 5 pág. · 110 KB"
+      "meta": "PDF · 5 pág. · 110 KB"
     },
     "moreHeading": "Más guías, próximamente",
     "moreText": "Por ejemplo, una guía para familias: qué necesita un niño para empezar, qué es un gi y cómo funciona el sistema de cinturones infantil."

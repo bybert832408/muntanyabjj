@@ -11,9 +11,27 @@ export const location = {
   lon: 1.1298362,
 };
 
-export const docs = {
-  manual: "/docs/manual-tecnico-bjj.pdf",
-  competition: "/docs/guia-competicion-bjj.pdf",
+export type DocLocale = "ca" | "es" | "en";
+
+export const docs: Record<"manual" | "competition", Record<DocLocale, string>> = {
+  manual: {
+    ca: "/docs/manual-tecnic-bjj-ca.pdf",
+    es: "/docs/manual-tecnico-bjj.pdf",
+    en: "/docs/bjj-technical-manual-en.pdf",
+  },
+  competition: {
+    ca: "/docs/guia-competicio-bjj-ca.pdf",
+    es: "/docs/guia-competicion-bjj.pdf",
+    en: "/docs/bjj-competition-guide-en.pdf",
+  },
+};
+
+// Each language's own endonym — intentionally not translated per active
+// page language, same convention as most language switchers.
+export const docLanguageLabels: Record<DocLocale, string> = {
+  ca: "Català",
+  es: "Castellano",
+  en: "English",
 };
 
 export const pricing = {

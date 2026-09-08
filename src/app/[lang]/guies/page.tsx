@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { getDictionary, type Locale } from "@/lib/dictionaries";
-import { docs } from "@/lib/site-config";
+import { getDictionary, locales, type Locale } from "@/lib/dictionaries";
+import { docs, docLanguageLabels } from "@/lib/site-config";
 import { assetPath } from "@/lib/asset-path";
 
 export async function generateMetadata({
@@ -19,10 +19,16 @@ export default async function GuiesPage({
 }) {
   const dict = await getDictionary(params.lang);
   const { guies } = dict;
+  const { lang } = params;
+
+  const orderedLocales: Locale[] = [
+    lang,
+    ...locales.filter((locale) => locale !== lang),
+  ];
 
   const cards = [
-    { ...guies.manual, href: docs.manual },
-    { ...guies.competition, href: docs.competition },
+    { ...guies.manual, paths: docs.manual },
+    { ...guies.competition, paths: docs.competition },
   ];
 
   return (
@@ -45,14 +51,24 @@ export default async function GuiesPage({
               <p className="mt-3 text-xs uppercase tracking-wide text-ink/50">
                 {card.meta}
               </p>
-              <a
-                href={assetPath(card.href)}
-                target="_blank"
-                rel="noopener"
-                className="mt-5 inline-block rounded-full bg-blue-logo px-5 py-2 text-sm font-semibold text-ink transition hover:brightness-110"
-              >
-                {guies.downloadLabel}
-              </a>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {orderedLocales.map((locale, i) => (
+                  <a
+                    key={locale}
+                    href={assetPath(card.paths[locale])}
+                    target="_blank"
+                    rel="noopener"
+                    className={
+                      i === 0
+                        ? "rounded-full bg-blue-logo px-4 py-1.5 text-sm font-semibold text-ink transition hover:brightness-110"
+                        : "rounded-full border border-black/20 px-4 py-1.5 text-sm font-semibold text-ink transition hover:border-black/40"
+                    }
+                  >
+                    {docLanguageLabels[locale]}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         ))}

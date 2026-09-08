@@ -101,16 +101,15 @@
   "guies": {
     "heading": "Guies",
     "intro": "Aquí trobaràs material de referència de l'escola, pensat per a alumnes i famílies. Són un complement a les classes presencials, no un substitut: la millor manera d'aprendre BJJ és sempre sobre el tatami.",
-    "downloadLabel": "Descarregar",
     "manual": {
-      "title": "Manual técnico de BJJ",
+      "title": "Manual tècnic de BJJ",
       "description": "Mecànica de les submissions, escapades, derrocaments i posicions, amb il·lustracions i avisos de legalitat per cinturó.",
-      "meta": "PDF · Castellà · 16 pàg. · 1,3 MB"
+      "meta": "PDF · 16 pàg. · 0,7 MB"
     },
     "competition": {
-      "title": "Guía de competición BJJ",
+      "title": "Guia de competició",
       "description": "Puntuació IBJJF, faltes, tècniques permeses per cinturó i un glossari bàsic de competició.",
-      "meta": "PDF · Castellà · 5 pàg. · 110 KB"
+      "meta": "PDF · 5 pàg. · 110 KB"
     },
     "moreHeading": "Més guies, properament",
     "moreText": "Per exemple, una guia per a famílies: què necessita un infant per començar, què és un gi i com funciona el sistema de cinturons infantil."

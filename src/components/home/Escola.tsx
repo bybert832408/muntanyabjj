@@ -3,7 +3,7 @@ import type { Dictionary } from "@/lib/dictionaries";
 export default function Escola({ dict }: { dict: Dictionary }) {
   return (
     <section className="border-b border-black/5 bg-offwhite">
-      <div className="mx-auto max-w-5xl px-4 py-16">
+      <div className="mx-auto max-w-5xl px-4 pb-16 pt-16 sm:pt-28 lg:pt-36">
         <h2 className="text-2xl font-bold text-ink sm:text-3xl">
           {dict.home.escola.heading}
         </h2>

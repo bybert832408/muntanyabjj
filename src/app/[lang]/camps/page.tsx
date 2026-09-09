@@ -27,7 +27,10 @@ export default async function CampsPage({
       <p className="mt-3 max-w-2xl text-ink/70">{camps.intro}</p>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+        <Link
+          href={`/${params.lang}/camps/2026`}
+          className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:border-black/20 hover:shadow-md"
+        >
           <div className="h-1.5 bg-black/10" />
           <div className="p-6">
             <div className="flex items-center justify-between gap-3">
@@ -38,7 +41,7 @@ export default async function CampsPage({
             </div>
             <p className="mt-3 text-sm text-ink/70">{camps.camp2026.body}</p>
           </div>
-        </div>
+        </Link>
 
         <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
           <div className="h-1.5 bg-blue-logo" />

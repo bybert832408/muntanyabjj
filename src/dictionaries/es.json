@@ -99,7 +99,15 @@
     "camp2026": {
       "title": "Ganbaru Camp 2026",
       "badge": "Finalizado",
-      "body": "5, 6 y 7 de junio · Sort (Pirineo catalán). Brazilian Jiu-Jitsu y rafting."
+      "body": "5, 6 y 7 de junio · Sort (Pirineo catalán). Brazilian Jiu-Jitsu y rafting.",
+      "detail": {
+        "subtitle": "5, 6 y 7 de junio de 2026 · Sort (Pirineo catalán)",
+        "posterAlt": "Cartel del Ganbaru Camp 2026 en Sort",
+        "story": "La primera edición del Ganbaru Camp reunió a practicantes de Brazilian Jiu-Jitsu durante un fin de semana de entrenamiento y montaña en Sort. Tres días combinando sesiones dirigidas en el tatami con actividades al aire libre como el rafting por el Noguera Pallaresa, en el marco incomparable del Pallars. Buen jiu-jitsu, buen ambiente y la montaña de casa.",
+        "galleryHeading": "Galería",
+        "galleryNote": "Más fotos muy pronto. Mientras, en el Instagram @muntanyabjj.",
+        "back": "← Volver a Camps"
+      }
     },
     "camp2027": {
       "title": "Ganbaru Camp 2027",

@@ -1,0 +1,166 @@
+{
+  "site": {
+    "name": "Muntanya Jiu-Jitsu",
+    "tagline": "Brazilian Jiu-Jitsu al Pallars Sobirà"
+  },
+  "nav": {
+    "home": "Inici",
+    "prices": "Tarifes",
+    "camps": "Camps",
+    "guides": "Guies",
+    "shop": "Botiga",
+    "cta": "Apunta't",
+    "openMenu": "Obrir menú",
+    "closeMenu": "Tancar menú"
+  },
+  "trialBadge": "Primera classe de prova gratuïta",
+  "home": {
+    "hero": {
+      "heading": "Muntanya Jiu-Jitsu",
+      "subheading": "Brazilian Jiu-Jitsu de poble, al Pallars Sobirà. Entrena respecte, esforç i comunitat sobre el tatami de Sort.",
+      "ctaJoin": "Apunta't",
+      "ctaWhatsapp": "Escriu-nos per WhatsApp"
+    },
+    "escola": {
+      "heading": "L'escola",
+      "intro": "Muntanya Jiu-Jitsu és l'escola de BJJ de Sort, oberta a adults i nens. Entrenem a un ritme de poble: proper, exigent quan cal i sense presses.",
+      "values": [
+        {
+          "title": "Respecte",
+          "desc": "Al tatami tothom hi és igual, del cinturó blanc al negre."
+        },
+        {
+          "title": "Esforç",
+          "desc": "Es progressa a base de constància, no de talent innat."
+        },
+        {
+          "title": "Comunitat",
+          "desc": "Una família d'entrenament, dins i fora del tatami."
+        }
+      ],
+      "affiliation": "Escola afiliada a Team Ganbaru"
+    },
+    "instructor": {
+      "heading": "L'instructor",
+      "name": "Pablo",
+      "role": "Instructor",
+      "bio": "Pablo dirigeix Muntanya Jiu-Jitsu amb l'objectiu de portar el Brazilian Jiu-Jitsu de nivell al Pallars, per a adults i nens.",
+      "lineageHeading": "Llinatge",
+      "lineageText": "Pablo es va formar a Ases Jiu-Jitsu (València) sota Ezekiel Zayas, cinturó negre des del 2010, fundador d'Ases Jiu-Jitsu i director tècnic de Team Ganbaru. Zayas és multicampió europeu IBJJF en cinturó negre i àrbitre internacional."
+    },
+    "horaris": {
+      "heading": "Horaris",
+      "note": "Totes les classes es fan al Poliesportiu Municipal de Sort.",
+      "days": {
+        "mon": "Dilluns",
+        "wed": "Dimecres",
+        "fri": "Divendres"
+      },
+      "sessionTypes": {
+        "bjj": "BJJ",
+        "bjjKids": "BJJ infantil"
+      }
+    },
+    "galeria": {
+      "heading": "Galeria",
+      "placeholder": "Fotos properament",
+      "instagramNote": "Més fotos i vídeos a Instagram"
+    },
+    "ubicacio": {
+      "heading": "Ubicació i contacte",
+      "addressLabel": "On som",
+      "phoneLabel": "Telèfon / WhatsApp",
+      "instagramLabel": "Instagram",
+      "mapLinkLabel": "Obrir al mapa"
+    }
+  },
+  "tarifes": {
+    "heading": "Tarifes",
+    "intro": "Preus clars, sense lletra petita.",
+    "monthly": {
+      "label": "Mensualitat",
+      "period": "/mes"
+    },
+    "dropIn": {
+      "label": "Sessió solta",
+      "period": "/classe"
+    },
+    "private": {
+      "label": "Classes particulars",
+      "period": "/hora"
+    },
+    "trial": "Primera classe de prova gratuïta",
+    "ctaHeading": "Tens dubtes sobre les tarifes?",
+    "ctaButton": "Contacta'ns"
+  },
+  "camps": {
+    "heading": "Camps",
+    "intro": "Cada estiu organitzem el Ganbaru Camp a Sort, un cap de setmana d'immersió en el Brazilian Jiu-Jitsu combinat amb activitats de muntanya al Pallars. Entrenaments dirigits, bon ambient d'equip i les activitats que fan únic el nostre entorn, com el ràfting pel Noguera Pallaresa. Obert a practicants de tots els nivells.",
+    "camp2026": {
+      "title": "Ganbaru Camp 2026",
+      "badge": "Finalitzat",
+      "body": "5, 6 i 7 de juny · Sort (Pirineu català). Brazilian Jiu-Jitsu i ràfting.",
+      "detail": {
+        "subtitle": "5, 6 i 7 de juny de 2026 · Sort (Pirineu català)",
+        "posterAlt": "Cartell del Ganbaru Camp 2026 a Sort",
+        "story": "La primera edició del Ganbaru Camp va reunir practicants de Brazilian Jiu-Jitsu per un cap de setmana d'entrenament i muntanya a Sort. Tres dies combinant sessions dirigides al tatami amb activitats a l'aire lliure com el ràfting pel Noguera Pallaresa, en el marc incomparable del Pallars. Bon jiu-jitsu, bon ambient i la muntanya de casa.",
+        "galleryHeading": "Galeria",
+        "galleryNote": "Més fotos ben aviat. Mentrestant, a l'Instagram @muntanyabjj.",
+        "back": "← Tornar a Camps"
+      }
+    },
+    "camp2027": {
+      "title": "Ganbaru Camp 2027",
+      "badge": "Properament",
+      "body": "Estem preparant la propera edició. Deixa'ns les teves dades i t'avisem quan obrim inscripcions.",
+      "cta": "Apunta't"
+    }
+  },
+  "guies": {
+    "heading": "Guies",
+    "intro": "Aquí trobaràs material de referència de l'escola, pensat per a alumnes i famílies. Són un complement a les classes presencials, no un substitut: la millor manera d'aprendre BJJ és sempre sobre el tatami.",
+    "manual": {
+      "title": "Manual tècnic de BJJ",
+      "description": "Mecànica de les submissions, escapades, derrocaments i posicions, amb il·lustracions i avisos de legalitat per cinturó.",
+      "meta": "PDF · 16 pàg. · 0,7 MB"
+    },
+    "competition": {
+      "title": "Guia de competició",
+      "description": "Puntuació IBJJF, faltes, tècniques permeses per cinturó i un glossari bàsic de competició.",
+      "meta": "PDF · 5 pàg. · 110 KB"
+    },
+    "moreHeading": "Més guies, properament",
+    "moreText": "Per exemple, una guia per a famílies: què necessita un infant per començar, què és un gi i com funciona el sistema de cinturons infantil."
+  },
+  "botiga": {
+    "heading": "Botiga",
+    "intro": "La botiga de Muntanya Jiu-Jitsu encara no és oberta.",
+    "comingSoon": "Properament"
+  },
+  "apuntat": {
+    "heading": "Apunta't",
+    "intro": "Prova la teva primera classe de BJJ gratis. Omple el formulari o escriu-nos directament per WhatsApp.",
+    "form": {
+      "name": "Nom",
+      "studentAge": "Edat de l'alumne/a",
+      "typeLabel": "Tipus de classe",
+      "typeAdult": "Adults",
+      "typeKids": "Infantil",
+      "phone": "Telèfon",
+      "message": "Missatge",
+      "submit": "Enviar",
+      "underConstruction": "El formulari encara està en construcció. De moment, escriu-nos per WhatsApp i et responem de seguida."
+    },
+    "whatsapp": {
+      "heading": "O més ràpid, per WhatsApp",
+      "button": "Obrir WhatsApp",
+      "message": "Hola! M'agradaria provar la classe de prova gratuïta de BJJ a Muntanya Jiu-Jitsu."
+    }
+  },
+  "footer": {
+    "affiliation": "Escola afiliada a Team Ganbaru",
+    "contactHeading": "Contacte",
+    "instagram": "Instagram",
+    "rights": "Tots els drets reservats."
+  }
+}

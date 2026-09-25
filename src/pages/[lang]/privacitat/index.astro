@@ -1,0 +1,62 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { locales, getDictionary, type Locale } from "@/i18n/config";
+import { assetPath } from "@/lib/asset-path";
+import { CONTACT_EMAIL, OWNER_NAME, OWNER_NIF, OWNER_ADDRESS } from "@/config/site";
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const dict = getDictionary(lang);
+const { legal } = dict;
+const { privacy } = legal;
+
+const emailLink = `<a href="mailto:${CONTACT_EMAIL}" class="font-semibold text-ink underline decoration-blue-logo decoration-2 underline-offset-2">${CONTACT_EMAIL}</a>`;
+const withEmail = (text: string) => text.replace("{{EMAIL}}", emailLink);
+---
+
+<BaseLayout lang={lang} title={`${privacy.title} · ${dict.site.name}`} path="privacitat/">
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <h1 class="text-3xl font-extrabold text-ink sm:text-4xl">{privacy.title}</h1>
+
+    <div class="mt-8 rounded-2xl border border-black/10 bg-white p-6">
+      <h2 class="text-lg font-bold text-ink">{legal.responsableHeading}</h2>
+      <p class="mt-2 text-sm text-ink/80">{OWNER_NAME}</p>
+      <p class="mt-1 text-sm text-ink/80">
+        {legal.contactLabel}:{" "}
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          class="font-semibold text-ink underline decoration-blue-logo decoration-2 underline-offset-2"
+        >
+          {CONTACT_EMAIL}
+        </a>
+      </p>
+      {OWNER_NIF && <p class="mt-1 text-sm text-ink/80">{legal.nifLabel}: {OWNER_NIF}</p>}
+      {OWNER_ADDRESS && <p class="mt-1 text-sm text-ink/80">{legal.addressLabel}: {OWNER_ADDRESS}</p>}
+    </div>
+
+    <div class="mt-10 space-y-10">
+      {privacy.sections.map((section) => (
+        <div>
+          <h2 class="text-xl font-bold text-ink">{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p class="mt-3 text-ink/70" set:html={withEmail(paragraph)} />
+          ))}
+          {section.list.length > 0 && (
+            <ul class="mt-3 list-disc space-y-1 pl-5 text-ink/70">
+              {section.list.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <a href={assetPath(`/${lang}/`)} class="mt-12 inline-block text-sm font-semibold text-ink/60 transition hover:text-ink">
+      {legal.backHome}
+    </a>
+  </section>
+</BaseLayout>

@@ -1,12 +1,15 @@
 ---
-import type { Dictionary } from "@/i18n/config";
+import type { Dictionary, Locale } from "@/i18n/config";
 import { contact } from "@/lib/site-config";
+import { CONTACT_EMAIL } from "@/config/site";
+import { assetPath } from "@/lib/asset-path";
 
 interface Props {
+  lang: Locale;
   dict: Dictionary;
 }
 
-const { dict } = Astro.props;
+const { lang, dict } = Astro.props;
 const year = new Date().getFullYear();
 ---
 
@@ -19,9 +22,17 @@ const year = new Date().getFullYear();
       <a href={`https://wa.me/${contact.whatsappNumber}`} class="hover:text-white">
         {contact.whatsappDisplay}
       </a>
+      <a href={`mailto:${CONTACT_EMAIL}`} class="hover:text-white">
+        {dict.footer.email}: {CONTACT_EMAIL}
+      </a>
       <a href={contact.instagramUrl} class="hover:text-white">
         {dict.footer.instagram} {contact.instagramHandle}
       </a>
+    </div>
+
+    <div class="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-white/60">
+      <a href={assetPath(`/${lang}/privacitat/`)} class="hover:text-white">{dict.footer.privacyLink}</a>
+      <a href={assetPath(`/${lang}/cookies/`)} class="hover:text-white">{dict.footer.cookiesLink}</a>
     </div>
 
     <p class="mt-4 text-white/50">

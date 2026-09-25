@@ -2,7 +2,17 @@ import type { APIRoute } from "astro";
 import { locales } from "@/i18n/config";
 import { SITE_URL } from "@/config/site";
 
-const PAGES = ["", "tarifes/", "camps/", "camps/2026/", "guies/", "botiga/", "apuntat/"];
+const PAGES = [
+  "",
+  "tarifes/",
+  "camps/",
+  "camps/2026/",
+  "guies/",
+  "botiga/",
+  "apuntat/",
+  "privacitat/",
+  "cookies/",
+];
 
 export const GET: APIRoute = () => {
   const urls = PAGES.flatMap((page) =>

@@ -70,6 +70,7 @@
       "heading": "Ubicació i contacte",
       "addressLabel": "On som",
       "phoneLabel": "Telèfon / WhatsApp",
+      "emailLabel": "Correu electrònic",
       "instagramLabel": "Instagram",
       "mapLinkLabel": "Obrir al mapa"
     }
@@ -91,7 +92,8 @@
     },
     "trial": "Primera classe de prova gratuïta",
     "ctaHeading": "Tens dubtes sobre les tarifes?",
-    "ctaButton": "Contacta'ns"
+    "ctaButton": "Contacta'ns",
+    "orEmailLabel": "O escriu-nos a"
   },
   "camps": {
     "heading": "Camps",
@@ -154,13 +156,83 @@
     "whatsapp": {
       "heading": "O més ràpid, per WhatsApp",
       "button": "Obrir WhatsApp",
-      "message": "Hola! M'agradaria provar la classe de prova gratuïta de BJJ a Muntanya Jiu-Jitsu."
+      "message": "Hola! M'agradaria provar la classe de prova gratuïta de BJJ a Muntanya Jiu-Jitsu.",
+      "orEmailLabel": "O escriu-nos a"
     }
   },
   "footer": {
     "affiliation": "Escola afiliada a Team Ganbaru",
     "contactHeading": "Contacte",
     "instagram": "Instagram",
+    "email": "Correu",
+    "privacyLink": "Política de privacitat",
+    "cookiesLink": "Política de galetes",
     "rights": "Tots els drets reservats."
+  },
+  "legal": {
+    "responsableHeading": "Responsable del tractament",
+    "contactLabel": "Contacte",
+    "nifLabel": "NIF",
+    "addressLabel": "Adreça",
+    "backHome": "← Tornar a l'inici",
+    "privacy": {
+      "title": "Política de privacitat",
+      "sections": [
+        {
+          "heading": "Quines dades tractem i per a què",
+          "paragraphs": [
+            "Aquesta web no té formularis ni registre d'usuaris. Només tractem les dades que ens facilites voluntàriament en contactar-nos per WhatsApp o per correu electrònic (nom, telèfon, correu i la informació que incloguis al teu missatge), amb aquestes finalitats:"
+          ],
+          "list": [
+            "Respondre les teves consultes.",
+            "Gestionar la teva inscripció a les classes."
+          ]
+        },
+        {
+          "heading": "Base legal",
+          "paragraphs": [],
+          "list": [
+            "Consultes: el teu consentiment en contactar-nos (art. 6.1.a RGPD).",
+            "Inscripció: l'aplicació de mesures precontractuals i l'execució del servei que sol·licites (art. 6.1.b RGPD)."
+          ]
+        },
+        {
+          "heading": "Menors d'edat",
+          "paragraphs": [
+            "Si la inscripció és d'un menor de 14 anys, l'ha de fer el seu pare, mare o tutor legal, que és qui facilita les dades i presta el consentiment."
+          ],
+          "list": []
+        },
+        {
+          "heading": "Quant de temps les conservem",
+          "paragraphs": [
+            "Les dades de consultes es conserven el temps necessari per respondre-les. Les dels alumnes inscrits, mentre duri la relació i, després, durant els terminis que exigeixi la llei."
+          ],
+          "list": []
+        },
+        {
+          "heading": "Destinataris i transferències internacionals",
+          "paragraphs": [
+            "No cedim les teves dades a tercers, tret d'obligació legal. En fer servir WhatsApp (Meta Platforms) i Gmail (Google), aquests proveïdors poden tractar dades fora de l'Espai Econòmic Europeu; totes dues empreses estan adherides al Marc de Privadesa de Dades UE-EUA, que la Comissió Europea reconeix com a garantia adequada."
+          ],
+          "list": []
+        },
+        {
+          "heading": "Els teus drets",
+          "paragraphs": [
+            "Pots exercir els teus drets d'accés, rectificació, supressió, oposició, limitació i portabilitat escrivint a {{EMAIL}}. Si consideres que no hem atès correctament la teva sol·licitud, pots reclamar davant l'Agència Espanyola de Protecció de Dades (https://www.aepd.es)."
+          ],
+          "list": []
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Política de galetes",
+      "paragraphs": [
+        "Aquesta web no utilitza cap galeta (cookie) pròpia: no té formularis actius, registre d'usuaris ni eines d'anàlisi o publicitat.",
+        "Algunes pàgines carreguen recursos d'altres proveïdors necessaris perquè es vegin bé: les tipografies (Google Fonts) i el mapa incrustat de la ubicació (OpenStreetMap). Aquestes peticions no instal·len cap galeta al teu dispositiu, però sí que impliquen una connexió tècnica amb els servidors d'aquests proveïdors, que hi reben la teva adreça IP com en qualsevol petició a internet.",
+        "Com que no fem servir galetes de cap tipus, no cal el teu consentiment. Pots gestionar o bloquejar aquestes peticions des de la configuració del teu navegador si ho prefereixes."
+      ]
+    }
   }
 }

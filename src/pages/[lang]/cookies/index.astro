@@ -1,0 +1,30 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { locales, getDictionary, type Locale } from "@/i18n/config";
+import { assetPath } from "@/lib/asset-path";
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const dict = getDictionary(lang);
+const { legal } = dict;
+const { cookies } = legal;
+---
+
+<BaseLayout lang={lang} title={`${cookies.title} · ${dict.site.name}`} path="cookies/">
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <h1 class="text-3xl font-extrabold text-ink sm:text-4xl">{cookies.title}</h1>
+
+    <div class="mt-8 space-y-4">
+      {cookies.paragraphs.map((paragraph) => (
+        <p class="text-ink/70">{paragraph}</p>
+      ))}
+    </div>
+
+    <a href={assetPath(`/${lang}/`)} class="mt-12 inline-block text-sm font-semibold text-ink/60 transition hover:text-ink">
+      {legal.backHome}
+    </a>
+  </section>
+</BaseLayout>

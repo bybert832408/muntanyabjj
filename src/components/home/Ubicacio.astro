@@ -1,6 +1,7 @@
 ---
 import type { Dictionary } from "@/i18n/config";
 import { contact, location, osmEmbedUrl, osmLink } from "@/lib/site-config";
+import { CONTACT_EMAIL } from "@/config/site";
 
 interface Props {
   dict: Dictionary;
@@ -34,6 +35,12 @@ const linkClass =
             <a href={`https://wa.me/${contact.whatsappNumber}`} class={linkClass}>
               {contact.whatsappDisplay}
             </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="text-white/70">{dict.home.ubicacio.emailLabel}</dt>
+          <dd class="mt-1">
+            <a href={`mailto:${CONTACT_EMAIL}`} class={linkClass}>{CONTACT_EMAIL}</a>
           </dd>
         </div>
         <div>

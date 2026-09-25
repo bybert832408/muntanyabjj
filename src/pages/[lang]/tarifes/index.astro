@@ -3,6 +3,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { locales, getDictionary, type Locale } from "@/i18n/config";
 import { pricing } from "@/lib/site-config";
 import { assetPath } from "@/lib/asset-path";
+import { CONTACT_EMAIL } from "@/config/site";
 
 export function getStaticPaths() {
   return locales.map((lang) => ({ params: { lang } }));
@@ -57,6 +58,12 @@ const cards = [
       >
         {tarifes.ctaButton}
       </a>
+      <p class="mt-4 text-sm text-ink/60">
+        {tarifes.orEmailLabel}{" "}
+        <a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-ink underline decoration-blue-logo decoration-2 underline-offset-2">
+          {CONTACT_EMAIL}
+        </a>
+      </p>
     </div>
   </section>
 </BaseLayout>

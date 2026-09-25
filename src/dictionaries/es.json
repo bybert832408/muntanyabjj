@@ -70,6 +70,7 @@
       "heading": "Ubicación y contacto",
       "addressLabel": "Dónde estamos",
       "phoneLabel": "Teléfono / WhatsApp",
+      "emailLabel": "Correo electrónico",
       "instagramLabel": "Instagram",
       "mapLinkLabel": "Abrir en el mapa"
     }
@@ -91,7 +92,8 @@
     },
     "trial": "Primera clase de prueba gratuita",
     "ctaHeading": "¿Tienes dudas sobre las tarifas?",
-    "ctaButton": "Contáctanos"
+    "ctaButton": "Contáctanos",
+    "orEmailLabel": "O escríbenos a"
   },
   "camps": {
     "heading": "Camps",
@@ -154,13 +156,83 @@
     "whatsapp": {
       "heading": "O más rápido, por WhatsApp",
       "button": "Abrir WhatsApp",
-      "message": "¡Hola! Me gustaría probar la clase de prueba gratuita de BJJ en Muntanya Jiu-Jitsu."
+      "message": "¡Hola! Me gustaría probar la clase de prueba gratuita de BJJ en Muntanya Jiu-Jitsu.",
+      "orEmailLabel": "O escríbenos a"
     }
   },
   "footer": {
     "affiliation": "Escuela afiliada a Team Ganbaru",
     "contactHeading": "Contacto",
     "instagram": "Instagram",
+    "email": "Correo",
+    "privacyLink": "Política de privacidad",
+    "cookiesLink": "Política de cookies",
     "rights": "Todos los derechos reservados."
+  },
+  "legal": {
+    "responsableHeading": "Responsable del tratamiento",
+    "contactLabel": "Contacto",
+    "nifLabel": "NIF",
+    "addressLabel": "Dirección",
+    "backHome": "← Volver al inicio",
+    "privacy": {
+      "title": "Política de privacidad",
+      "sections": [
+        {
+          "heading": "Qué datos tratamos y para qué",
+          "paragraphs": [
+            "Esta web no tiene formularios ni registro de usuarios. Solo tratamos los datos que nos facilitas voluntariamente al contactarnos por WhatsApp o por email (nombre, teléfono, email y la información que incluyas en tu mensaje), con estas finalidades:"
+          ],
+          "list": [
+            "Responder a tus consultas.",
+            "Gestionar tu inscripción en las clases."
+          ]
+        },
+        {
+          "heading": "Base legal",
+          "paragraphs": [],
+          "list": [
+            "Consultas: tu consentimiento al contactarnos (art. 6.1.a RGPD).",
+            "Inscripción: la aplicación de medidas precontractuales y la ejecución del servicio que solicitas (art. 6.1.b RGPD)."
+          ]
+        },
+        {
+          "heading": "Menores de edad",
+          "paragraphs": [
+            "Si la inscripción es de un menor de 14 años, debe realizarla su padre, madre o tutor legal, que es quien facilita los datos y presta el consentimiento."
+          ],
+          "list": []
+        },
+        {
+          "heading": "Cuánto tiempo los conservamos",
+          "paragraphs": [
+            "Los datos de consultas se conservan el tiempo necesario para responderlas. Los de alumnos inscritos, mientras dure la relación y, después, durante los plazos que exija la ley."
+          ],
+          "list": []
+        },
+        {
+          "heading": "Destinatarios y transferencias internacionales",
+          "paragraphs": [
+            "No cedemos tus datos a terceros salvo obligación legal. Al usar WhatsApp (Meta Platforms) y Gmail (Google), estos proveedores pueden tratar datos fuera del Espacio Económico Europeo; ambas empresas están adheridas al Marco de Privacidad de Datos UE-EE. UU., que la Comisión Europea reconoce como garantía adecuada."
+          ],
+          "list": []
+        },
+        {
+          "heading": "Tus derechos",
+          "paragraphs": [
+            "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a {{EMAIL}}. Si consideras que no hemos atendido correctamente tu solicitud, puedes reclamar ante la Agencia Española de Protección de Datos (https://www.aepd.es)."
+          ],
+          "list": []
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Política de cookies",
+      "paragraphs": [
+        "Esta web no utiliza ninguna cookie propia: no tiene formularios activos, registro de usuarios ni herramientas de análisis o publicidad.",
+        "Algunas páginas cargan recursos de otros proveedores necesarios para que se vean bien: las tipografías (Google Fonts) y el mapa incrustado de la ubicación (OpenStreetMap). Estas peticiones no instalan ninguna cookie en tu dispositivo, pero sí implican una conexión técnica con los servidores de estos proveedores, que reciben tu dirección IP como en cualquier petición a internet.",
+        "Como no usamos cookies de ningún tipo, no es necesario tu consentimiento. Puedes gestionar o bloquear estas peticiones desde la configuración de tu navegador si lo prefieres."
+      ]
+    }
   }
 }

@@ -70,6 +70,7 @@
       "heading": "Location & contact",
       "addressLabel": "Where we are",
       "phoneLabel": "Phone / WhatsApp",
+      "emailLabel": "Email",
       "instagramLabel": "Instagram",
       "mapLinkLabel": "Open in map"
     }
@@ -91,7 +92,8 @@
     },
     "trial": "First trial class free",
     "ctaHeading": "Questions about pricing?",
-    "ctaButton": "Contact us"
+    "ctaButton": "Contact us",
+    "orEmailLabel": "Or email us at"
   },
   "camps": {
     "heading": "Camps",
@@ -154,13 +156,83 @@
     "whatsapp": {
       "heading": "Or faster, on WhatsApp",
       "button": "Open WhatsApp",
-      "message": "Hi! I'd like to try the free trial BJJ class at Muntanya Jiu-Jitsu."
+      "message": "Hi! I'd like to try the free trial BJJ class at Muntanya Jiu-Jitsu.",
+      "orEmailLabel": "Or email us at"
     }
   },
   "footer": {
     "affiliation": "School affiliated with Team Ganbaru",
     "contactHeading": "Contact",
     "instagram": "Instagram",
+    "email": "Email",
+    "privacyLink": "Privacy policy",
+    "cookiesLink": "Cookie policy",
     "rights": "All rights reserved."
+  },
+  "legal": {
+    "responsableHeading": "Data controller",
+    "contactLabel": "Contact",
+    "nifLabel": "Tax ID",
+    "addressLabel": "Address",
+    "backHome": "← Back home",
+    "privacy": {
+      "title": "Privacy policy",
+      "sections": [
+        {
+          "heading": "What data we process and why",
+          "paragraphs": [
+            "This website has no forms or user accounts. We only process the data you voluntarily give us when contacting us by WhatsApp or email (name, phone number, email and the information you include in your message), for these purposes:"
+          ],
+          "list": [
+            "Answering your enquiries.",
+            "Managing your enrolment in classes."
+          ]
+        },
+        {
+          "heading": "Legal basis",
+          "paragraphs": [],
+          "list": [
+            "Enquiries: your consent when you contact us (GDPR art. 6.1.a).",
+            "Enrolment: taking pre-contractual steps and performing the service you request (GDPR art. 6.1.b)."
+          ]
+        },
+        {
+          "heading": "Minors",
+          "paragraphs": [
+            "If the enrolment is for a child under 14, it must be done by their parent or legal guardian, who provides the data and gives consent."
+          ],
+          "list": []
+        },
+        {
+          "heading": "How long we keep it",
+          "paragraphs": [
+            "Enquiry data is kept for as long as needed to answer it. Enrolled students' data is kept for the duration of the relationship and afterwards for the periods required by law."
+          ],
+          "list": []
+        },
+        {
+          "heading": "Recipients and international transfers",
+          "paragraphs": [
+            "We don't share your data with third parties except where legally required. By using WhatsApp (Meta Platforms) and Gmail (Google), these providers may process data outside the European Economic Area; both companies are certified under the EU-U.S. Data Privacy Framework, which the European Commission recognises as an adequate safeguard."
+          ],
+          "list": []
+        },
+        {
+          "heading": "Your rights",
+          "paragraphs": [
+            "You can exercise your rights of access, rectification, erasure, objection, restriction and portability by writing to {{EMAIL}}. If you believe we haven't properly handled your request, you can file a complaint with the Spanish Data Protection Agency (AEPD, https://www.aepd.es)."
+          ],
+          "list": []
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie policy",
+      "paragraphs": [
+        "This website doesn't use any cookies of its own: it has no active forms, user accounts, or analytics or advertising tools.",
+        "Some pages load resources from other providers needed for the site to display correctly: fonts (Google Fonts) and the embedded location map (OpenStreetMap). These requests don't install any cookie on your device, but they do involve a technical connection to those providers' servers, which receive your IP address as with any request on the internet.",
+        "Since we don't use cookies of any kind, your consent isn't required. You can manage or block these requests from your browser settings if you prefer."
+      ]
+    }
   }
 }

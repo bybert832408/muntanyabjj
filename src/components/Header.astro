@@ -1,0 +1,130 @@
+---
+import type { Dictionary, Locale } from "@/i18n/config";
+import { locales } from "@/i18n/config";
+import { assetPath } from "@/lib/asset-path";
+
+interface Props {
+  lang: Locale;
+  dict: Dictionary;
+}
+
+const { lang, dict } = Astro.props;
+
+const navItems = [
+  { href: `/${lang}/tarifes/`, label: dict.nav.prices },
+  { href: `/${lang}/camps/`, label: dict.nav.camps },
+  { href: `/${lang}/guies/`, label: dict.nav.guides },
+  { href: `/${lang}/botiga/`, label: dict.nav.shop },
+];
+
+const localeLinkClass = (locale: Locale) =>
+  locale === lang
+    ? "rounded-full bg-blue-logo px-2 py-0.5 font-semibold text-ink"
+    : "px-2 py-0.5 text-white/70 hover:text-white";
+---
+
+<header class="sticky top-0 z-50 bg-blue-kimono text-white">
+  <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
+    <a href={assetPath(`/${lang}/`)} class="shrink-0">
+      <img
+        src={assetPath("/images/logo-64.png")}
+        alt={dict.site.name}
+        width="48"
+        height="48"
+        class="h-10 w-10 md:h-12 md:w-12"
+      />
+    </a>
+
+    <nav aria-label="Navegació principal" class="hidden items-center gap-4 text-sm text-white/80 md:flex">
+      {navItems.map((item) => (
+        <a href={assetPath(item.href)} class="hover:text-white">{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="hidden items-center gap-3 md:flex">
+      <nav aria-label="Selector d'idioma" class="flex gap-1 text-sm">
+        {locales.map((locale) => (
+          <a href={assetPath(`/${locale}/`)} class={localeLinkClass(locale)}>
+            {locale.toUpperCase()}
+          </a>
+        ))}
+      </nav>
+
+      <a
+        href={assetPath(`/${lang}/apuntat/`)}
+        class="rounded-full bg-blue-logo px-4 py-2 text-sm font-semibold text-ink transition hover:brightness-110"
+      >
+        {dict.nav.cta}
+      </a>
+    </div>
+
+    <button
+      type="button"
+      id="menu-toggle"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label={dict.nav.openMenu}
+      data-open-label={dict.nav.openMenu}
+      data-close-label={dict.nav.closeMenu}
+      class="p-2 text-white md:hidden"
+    >
+      <svg id="icon-open" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <svg id="icon-close" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" class="hidden">
+        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-6 md:hidden">
+    <nav aria-label="Navegació principal" class="flex flex-col gap-4 pt-4 text-base">
+      {navItems.map((item) => (
+        <a href={assetPath(item.href)} class="text-white/80 hover:text-white">{item.label}</a>
+      ))}
+    </nav>
+
+    <nav aria-label="Selector d'idioma" class="mt-4 flex gap-2 text-sm">
+      {locales.map((locale) => (
+        <a href={assetPath(`/${locale}/`)} class={localeLinkClass(locale)}>
+          {locale.toUpperCase()}
+        </a>
+      ))}
+    </nav>
+
+    <a
+      href={assetPath(`/${lang}/apuntat/`)}
+      class="mt-5 block rounded-full bg-blue-logo px-4 py-2 text-center text-sm font-semibold text-ink transition hover:brightness-110"
+    >
+      {dict.nav.cta}
+    </a>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const iconOpen = document.getElementById("icon-open");
+  const iconClose = document.getElementById("icon-close");
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = menu?.classList.toggle("hidden") === false;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? toggle.dataset.closeLabel ?? "" : toggle.dataset.openLabel ?? ""
+    );
+    iconOpen?.classList.toggle("hidden", isOpen);
+    iconClose?.classList.toggle("hidden", !isOpen);
+  });
+
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.add("hidden");
+      toggle?.setAttribute("aria-expanded", "false");
+      toggle?.setAttribute("aria-label", toggle.dataset.openLabel ?? "");
+      iconOpen?.classList.remove("hidden");
+      iconClose?.classList.add("hidden");
+    });
+  });
+</script>

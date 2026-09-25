@@ -1,16 +1,31 @@
-# Notas de la sesión desatendida — Migración a Astro (Fases 0-1)
+# Notas de la sesión desatendida — Migración a Astro (Fases 0-2)
 
-> Sesión ejecutada sin supervisión por Claude Code. Todo el trabajo está en la
-> rama `astro-migration`. **`main` no se ha tocado en ningún momento** (ver
-> confirmación al final).
+> Todo el trabajo está en la rama `astro-migration`.
+> **`main` no se ha tocado en ningún momento** (ver confirmación al final).
 
 ## Resumen rápido
 
 - ✅ Fase 0 completa: inventario en [`MIGRACION-INVENTARIO.md`](./MIGRACION-INVENTARIO.md).
 - ✅ Fase 1 completa: Astro instalado y funcionando, con routing multiidioma
   y build local verificado.
-- ⏸️ Deploy de prueba: **NO se ha hecho**, por decisión explícita (ver abajo).
-  Pendiente de decidir contigo.
+- ✅ Fase 2 completa: Header/Footer/Home (Hero, Escola, Instructor, Horaris,
+  Galeria, Ubicacio) y las páginas Tarifes/Camps/Camps 2026/Guies/Botiga/Apuntat
+  portadas literalmente desde `_next-old/`, usando `_next-old/` como referencia
+  línea a línea. `npm run build`: 0 errores, 0 avisos, 22 páginas (coincide con
+  el inventario de Fase 0). Verificado en local con `astro preview` +
+  `astro dev` (navegación, imágenes, PDFs, WhatsApp, selector de idioma).
+- ✅ Tipografía decidida y aplicada: **Montserrat** (700/800) para títulos
+  (`h1`/`h2`/`h3`, vía `font-heading`), **Inter** (400–700) para cuerpo
+  (`font-sans`, por defecto en `body`), cargadas desde Google Fonts en
+  `BaseLayout.astro`.
+- ✅ `logo-360.png`: decidido con Suso que no hace falta generarlo —
+  `logo-64.png`/`logo.png` cubren todos los usos reales.
+- ✅ `.github/workflows/astro.yml` (renombrado desde `nextjs.yml`): actualizado
+  para construir con Astro (`withastro/action`) en vez de Next.js. **No se ha
+  hecho push ni merge a `main`** — sigue pendiente de que Suso confirme cuándo
+  reemplazar la producción actual.
+- ⏸️ Deploy real / activar en producción: **NO hecho**, sigue pendiente de
+  decisión (ver "Deploy de prueba" más abajo, ese razonamiento se mantiene).
 - ❌ Nada de `main` se ha tocado ni desplegado.
 
 ## Qué se ha hecho, paso a paso
@@ -109,31 +124,27 @@ Vercel, un repo aparte, o simplemente revisar en local con `astro dev`/
 
 ## Qué ha quedado pendiente / a medias
 
-1. **Contenido real no portado todavía** (a propósito, es la fase siguiente):
-   Header, Footer, Hero, Escola, Instructor, Horaris, Galeria, Ubicacio,
-   y las páginas Tarifes/Camps/Guies/Botiga/Apuntat siguen solo en
-   `_next-old/`, no en Astro.
-2. **Fuentes de título/cuerpo**: sin decidir (ver arriba). El proyecto Next
-   tampoco las tenía implementadas de verdad, así que no se pierde nada
-   respecto al estado anterior, pero conviene cerrarlo antes de portar el
-   contenido real.
-3. **`assetPath()` / helper de rutas para imágenes y PDFs**: en Next hacía
-   falta un helper explícito para anteponer el `basePath` a `/images/...` y
-   `/docs/...`. En Astro, con `base` fijo en `astro.config.mjs`, el
-   equivalente más directo es `import.meta.env.BASE_URL` (usado ya en el
-   selector de idioma de la home de prueba) — falta decidir el patrón
-   exacto (helper propio vs. usar `BASE_URL` directamente) cuando se porten
-   las imágenes reales.
-4. **Discrepancia `logo-360.png`** (detectada en el inventario, Fase 0): la
-   instrucción original mencionaba `logo-360.png` como asset de la web, pero
-   el fichero realmente usado en `public/` (ahora en `_next-old/public/`) es
-   `logo-64.png`; `logo-360.png` solo existe como material sin procesar en
-   `BJJ/`. No se ha generado ni inventado nada — **queda para revisar
-   contigo** si hace falta crear un `logo-360.png` de verdad.
-5. **Deploy de prueba** — ver sección anterior, pendiente de decisión.
-6. **SEO / metadata dinámica** (`generateMetadata` de Next, con OG por
-   idioma) — no portado todavía a la página de prueba mínima; se hará al
-   portar el layout real con Header/Footer.
+1. ~~Contenido real no portado todavía~~ — **hecho en Fase 2** (ver resumen).
+2. ~~Fuentes de título/cuerpo~~ — **decidido y aplicado**: Montserrat (títulos)
+   + Inter (cuerpo), vía Google Fonts en `BaseLayout.astro` y
+   `fontFamily.heading`/`sans` en `tailwind.config.mjs`.
+3. ~~`assetPath()` / helper de rutas~~ — **resuelto**: `src/lib/asset-path.ts`
+   con `assetPath(path)` usando `import.meta.env.BASE_URL`, usado en
+   Header, Hero, Instructor, Camp 2026 y Guies para imágenes/PDFs, y también
+   para los enlaces internos entre páginas (mismo patrón, mismo helper).
+4. ~~Discrepancia `logo-360.png`~~ — **decidido con Suso: no hace falta**,
+   `logo-64.png`/`logo.png` cubren todos los usos reales.
+5. **Deploy de prueba / activar en producción** — sigue pendiente, ver
+   sección anterior. El workflow ya está actualizado para Astro
+   (`.github/workflows/astro.yml`), pero **no se ha hecho push ni merge a
+   `main`**; falta que Suso confirme cuándo se reemplaza la producción
+   actual (Next.js en `main`) por esta rama.
+6. ~~SEO / metadata dinámica~~ — **portado**: `BaseLayout.astro` genera
+   `<title>`, `description` y Open Graph (title/description/image) por
+   página e idioma, equivalente al `generateMetadata` de Next. Sitemap.xml
+   y robots.txt **siguen sin existir** (tampoco existían en el Next.js
+   original — no es una regresión de la migración, es una tarea de SEO v1
+   que nunca se llegó a implementar; pendiente si se quiere para v1).
 
 ## Cómo probar esto en local
 
@@ -164,8 +175,10 @@ también se movió ahí, así que no debería hacer falta reinstalar).
 
 - `git rev-parse main` y `git rev-parse origin/main` coinciden exactamente
   (`ddfc631`) — ni un commit nuevo, ni un push, ni un merge a `main`.
-- El workflow `.github/workflows/nextjs.yml` (el que despliega producción)
-  no se ha modificado.
+- El workflow que **despliega producción** (el que corre sobre `main`) no se
+  ha modificado — sigue siendo el Next.js original. `astro.yml` (renombrado
+  desde `nextjs.yml` y reescrito para Astro) solo existe en la rama
+  `astro-migration`; no tiene efecto hasta que esta rama se mergee a `main`.
 - Se ha hecho `git push origin astro-migration` (rama nueva, no `main`) tal
   como pedía la instrucción de la sesión — no afecta a producción.
 - La web de producción en GitHub Pages sigue sirviéndose desde `main` sin
@@ -173,8 +186,11 @@ también se movió ahí, así que no debería hacer falta reinstalar).
 
 ## Siguiente paso sugerido (para cuando lo revises)
 
-1. Revisar y decidir lo pendiente de la lista de arriba (sobre todo fuentes
-   y estrategia de preview).
-2. Continuar con la Fase 2: portar Header/Footer/Hero y el resto de
-   secciones de la Home, luego las páginas Tarifes/Camps/Guies/Botiga/Apuntat,
-   usando `_next-old/` como referencia línea a línea.
+1. Revisar el resultado de la Fase 2 en local (`npm run dev` /
+   `npm run build` + `npm run preview`).
+2. Decidir la estrategia de preview/deploy real (Fase 3): Netlify, Vercel,
+   repo aparte, o esperar y reemplazar `main` directamente cuando la
+   migración esté lista.
+3. Cuando se decida: mergear `astro-migration` a `main` (esto activará
+   `astro.yml` y sustituirá la Next.js de producción) — **requiere tu
+   confirmación explícita antes de hacerlo**.

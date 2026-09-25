@@ -1,0 +1,64 @@
+---
+import type { Dictionary, Locale } from "@/i18n/config";
+import { whatsappHref } from "@/lib/site-config";
+import { assetPath } from "@/lib/asset-path";
+
+interface Props {
+  lang: Locale;
+  dict: Dictionary;
+}
+
+const { lang, dict } = Astro.props;
+---
+
+<section class="relative overflow-x-clip bg-gradient-to-b from-blue-kimono to-ink text-white">
+  <div class="mx-auto max-w-5xl px-4 py-20 text-center sm:py-28 sm:text-left">
+    <div class="sm:max-w-lg">
+      <img
+        src={assetPath("/images/logo.png")}
+        alt={dict.site.name}
+        width="360"
+        height="360"
+        class="mx-auto h-24 w-24 sm:hidden"
+      />
+
+      <span class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 text-sm font-semibold text-ink">
+        <span class="h-2 w-2 rounded-full bg-blue-logo" aria-hidden="true"></span>
+        {dict.trialBadge}
+      </span>
+
+      <h1 class="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl">
+        {dict.home.hero.heading}
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-white/70 sm:mx-0 sm:max-w-none">
+        {dict.home.hero.subheading}
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+        <a
+          href={assetPath(`/${lang}/apuntat/`)}
+          class="rounded-full bg-blue-logo px-6 py-3 font-semibold text-ink transition hover:brightness-110"
+        >
+          {dict.home.hero.ctaJoin}
+        </a>
+        <a
+          href={whatsappHref(dict.apuntat.whatsapp.message)}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full border border-white/30 px-6 py-3 font-semibold text-white transition hover:border-white"
+        >
+          {dict.home.hero.ctaWhatsapp}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <img
+    src={assetPath("/images/logo.png")}
+    alt=""
+    aria-hidden="true"
+    width="380"
+    height="380"
+    class="pointer-events-none absolute bottom-0 right-8 hidden h-[clamp(160px,26vw,380px)] w-[clamp(160px,26vw,380px)] translate-y-[30%] rotate-[15deg] drop-shadow-xl sm:block lg:right-20 lg:h-[clamp(220px,34vw,480px)] lg:w-[clamp(220px,34vw,480px)] lg:translate-y-[calc(12%_+_28px)] xl:h-[clamp(250px,38vw,540px)] xl:w-[clamp(250px,38vw,540px)]"
+  />
+</section>

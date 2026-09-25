@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -9,6 +11,10 @@ export default {
         ink: "#0A0A0A",
         offwhite: "#F7F9FB",
         "yellow-kids": "#FACC15",
+      },
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        heading: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -1,0 +1,80 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { locales, getDictionary, type Locale } from "@/i18n/config";
+import { whatsappHref } from "@/lib/site-config";
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const dict = getDictionary(lang);
+const { apuntat } = dict;
+---
+
+<BaseLayout lang={lang} title={`${apuntat.heading} · ${dict.site.name}`}>
+  <section class="mx-auto max-w-3xl px-4 py-16">
+    <h1 class="text-3xl font-extrabold text-ink sm:text-4xl">{apuntat.heading}</h1>
+    <p class="mt-3 text-ink/70">{apuntat.intro}</p>
+
+    <div class="mt-10 grid gap-8 sm:grid-cols-2">
+      <div class="rounded-2xl border border-black/10 bg-white p-6">
+        <p class="mb-4 rounded-lg bg-blue-logo/15 px-4 py-3 text-sm text-ink">
+          {apuntat.form.underConstruction}
+        </p>
+
+        <fieldset disabled class="space-y-4 opacity-70">
+          <div>
+            <label class="block text-sm text-ink/70" for="name">{apuntat.form.name}</label>
+            <input id="name" type="text" class="mt-1 w-full rounded-lg border border-black/20 bg-white px-3 py-2" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-ink/70" for="age">{apuntat.form.studentAge}</label>
+            <input id="age" type="text" class="mt-1 w-full rounded-lg border border-black/20 bg-white px-3 py-2" />
+          </div>
+
+          <div>
+            <span class="block text-sm text-ink/70">{apuntat.form.typeLabel}</span>
+            <div class="mt-2 flex gap-4 text-sm text-ink">
+              <label class="flex items-center gap-2">
+                <input type="radio" name="type" />
+                {apuntat.form.typeAdult}
+              </label>
+              <label class="flex items-center gap-2">
+                <input type="radio" name="type" />
+                {apuntat.form.typeKids}
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm text-ink/70" for="phone">{apuntat.form.phone}</label>
+            <input id="phone" type="tel" class="mt-1 w-full rounded-lg border border-black/20 bg-white px-3 py-2" />
+          </div>
+
+          <div>
+            <label class="block text-sm text-ink/70" for="message">{apuntat.form.message}</label>
+            <textarea id="message" rows="3" class="mt-1 w-full rounded-lg border border-black/20 bg-white px-3 py-2"></textarea>
+          </div>
+
+          <button type="submit" class="w-full rounded-full bg-blue-logo px-6 py-3 font-semibold text-ink">
+            {apuntat.form.submit}
+          </button>
+        </fieldset>
+      </div>
+
+      <div class="flex flex-col items-center justify-center rounded-2xl border border-black/10 bg-white p-6 text-center">
+        <h2 class="text-lg font-bold text-ink">{apuntat.whatsapp.heading}</h2>
+        <a
+          href={whatsappHref(apuntat.whatsapp.message)}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-6 rounded-full bg-blue-logo px-6 py-3 font-semibold text-ink transition hover:brightness-110"
+        >
+          {apuntat.whatsapp.button}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

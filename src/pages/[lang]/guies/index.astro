@@ -1,0 +1,63 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { locales, getDictionary, type Locale } from "@/i18n/config";
+import { docs, docLanguageLabels } from "@/lib/site-config";
+import { assetPath } from "@/lib/asset-path";
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const dict = getDictionary(lang);
+const { guies } = dict;
+
+const orderedLocales: Locale[] = [lang, ...locales.filter((locale) => locale !== lang)];
+
+const cards = [
+  { ...guies.manual, paths: docs.manual },
+  { ...guies.competition, paths: docs.competition },
+];
+---
+
+<BaseLayout lang={lang} title={`${guies.heading} · ${dict.site.name}`}>
+  <section class="mx-auto max-w-5xl px-4 py-16">
+    <h1 class="text-3xl font-extrabold text-ink sm:text-4xl">{guies.heading}</h1>
+    <p class="mt-3 max-w-2xl text-ink/70">{guies.intro}</p>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      {cards.map((card) => (
+        <div class="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+          <div class="h-1.5 bg-blue-logo" />
+          <div class="p-6">
+            <p class="font-semibold text-ink">{card.title}</p>
+            <p class="mt-2 text-sm text-ink/70">{card.description}</p>
+            <p class="mt-3 text-xs uppercase tracking-wide text-ink/50">{card.meta}</p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              {orderedLocales.map((locale, i) => (
+                <a
+                  href={assetPath(card.paths[locale])}
+                  target="_blank"
+                  rel="noopener"
+                  class={
+                    i === 0
+                      ? "rounded-full bg-blue-logo px-4 py-1.5 text-sm font-semibold text-ink transition hover:brightness-110"
+                      : "rounded-full border border-black/20 px-4 py-1.5 text-sm font-semibold text-ink transition hover:border-black/40"
+                  }
+                >
+                  {docLanguageLabels[locale]}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-8 rounded-2xl border border-dashed border-black/15 bg-offwhite p-6">
+      <p class="font-semibold text-ink">{guies.moreHeading}</p>
+      <p class="mt-2 text-sm text-ink/70">{guies.moreText}</p>
+    </div>
+  </section>
+</BaseLayout>

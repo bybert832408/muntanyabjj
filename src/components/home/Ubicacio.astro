@@ -1,0 +1,48 @@
+---
+import type { Dictionary } from "@/i18n/config";
+import { contact, location, osmEmbedUrl, osmLink } from "@/lib/site-config";
+
+interface Props {
+  dict: Dictionary;
+}
+
+const { dict } = Astro.props;
+const linkClass =
+  "font-semibold text-white underline decoration-blue-logo decoration-2 underline-offset-2 hover:decoration-white";
+---
+
+<section class="bg-blue-kimono text-white">
+  <div class="mx-auto max-w-5xl px-4 py-16">
+    <h2 class="text-2xl font-bold sm:text-3xl">{dict.home.ubicacio.heading}</h2>
+
+    <div class="mt-8 grid gap-8 sm:grid-cols-2">
+      <div class="overflow-hidden rounded-2xl border border-white/20">
+        <iframe title={location.name} src={osmEmbedUrl()} class="h-72 w-full" loading="lazy"></iframe>
+        <a href={osmLink()} class="block bg-white/10 px-4 py-2 text-center text-sm text-white hover:bg-white/15">
+          {dict.home.ubicacio.mapLinkLabel}
+        </a>
+      </div>
+
+      <dl class="space-y-6 text-sm">
+        <div>
+          <dt class="text-white/70">{dict.home.ubicacio.addressLabel}</dt>
+          <dd class="mt-1 font-semibold text-white">{location.name}</dd>
+        </div>
+        <div>
+          <dt class="text-white/70">{dict.home.ubicacio.phoneLabel}</dt>
+          <dd class="mt-1">
+            <a href={`https://wa.me/${contact.whatsappNumber}`} class={linkClass}>
+              {contact.whatsappDisplay}
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="text-white/70">{dict.home.ubicacio.instagramLabel}</dt>
+          <dd class="mt-1">
+            <a href={contact.instagramUrl} class={linkClass}>{contact.instagramHandle}</a>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>

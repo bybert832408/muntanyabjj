@@ -1,11 +1,10 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import { SITE_URL } from "./src/config/site.ts";
 
-// Repo de GitHub Pages: bybert832408.github.io/muntanyabjj
-// Equivalente al basePath/assetPrefix condicionados que usaba Next.js.
+// Dominio propio: la web vive en la raíz, sin basePath.
 export default defineConfig({
-  site: "https://bybert832408.github.io",
-  base: "/muntanyabjj",
+  site: SITE_URL,
   trailingSlash: "always",
   integrations: [tailwind()],
 });

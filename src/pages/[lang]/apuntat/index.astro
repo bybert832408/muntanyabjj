@@ -12,7 +12,7 @@ const dict = getDictionary(lang);
 const { apuntat } = dict;
 ---
 
-<BaseLayout lang={lang} title={`${apuntat.heading} · ${dict.site.name}`}>
+<BaseLayout lang={lang} title={`${apuntat.heading} · ${dict.site.name}`} path="apuntat/">
   <section class="mx-auto max-w-3xl px-4 py-16">
     <h1 class="text-3xl font-extrabold text-ink sm:text-4xl">{apuntat.heading}</h1>
     <p class="mt-3 text-ink/70">{apuntat.intro}</p>

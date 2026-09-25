@@ -16,7 +16,7 @@ const { lang } = Astro.params as { lang: Locale };
 const dict = getDictionary(lang);
 ---
 
-<BaseLayout lang={lang} title={`${dict.site.name} — ${dict.site.tagline}`}>
+<BaseLayout lang={lang} title={`${dict.site.name} — ${dict.site.tagline}`} path="" schema>
   <Hero lang={lang} dict={dict} />
   <Escola dict={dict} />
   <Instructor dict={dict} />
